@@ -26,7 +26,17 @@ function App() {
   }
 
   const deleteList = (index) => {
-    setList(lists.filter((e) => e !== lists[index]));
+    let newList = [];
+    lists.forEach((list) => {
+      if (list.id !== index) {
+        newList.push({
+          id: list.id,
+          todo: list.todo,
+          status: list.status,
+        });
+      }
+    });
+    setList(newList);
   };
   const changeStatus = (index) => {
     let newList = [];
