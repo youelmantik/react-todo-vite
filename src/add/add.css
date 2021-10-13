@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.add {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.add form {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.add form input {
+  width: 88%;
+  background-color: #8353be;
+  color: white;
+  padding: 0.9rem;
+  border-radius: 100px;
+  border: none;
+  font-size: 1rem;
+  font-family: "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  margin-right: 1em;
+}
+.add form input:focus {
+  outline: none;
+}
+.add form input::placeholder {
+  color: #d6d6d6;
+}
+
+.add form button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  background-color: #8353be;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive for mobile */
+
+@media only screen and (max-width: 420px) {
+  .add {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+  }
+  .add form {
+    width: 95%;
+  }
+}

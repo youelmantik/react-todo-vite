@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.list-container {
+  width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.list-container::-webkit-scrollbar {
+  width: 0;
+}
+.list {
+  font-family: "Segoe UI", Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+  width: 90%;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2);
+}
+.list.done {
+  position: relative;
+  opacity: 50%;
+  pointer-events: none;
+}
+.list.done:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 3px solid #111;
+  width: 100%;
+}
+.list .todo {
+  max-width: 85%;
+  user-select: none;
+}
+.list .button {
+  display: flex;
+  width: 15%;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+}
+.list .button:active {
+  outline: none;
+}
+.list .button .fa {
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* Responsive for mobile */
+@media only screen and (max-width: 420px) {
+  .list-container {
+    width: 100%;
+    max-height: 85%;
+  }
+  .list {
+    width: 90%;
+  }
+}
